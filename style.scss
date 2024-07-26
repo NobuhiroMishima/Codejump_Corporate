@@ -1,0 +1,119 @@
+@use "common" as *;
+
+a{
+    text-decoration: none;
+    color: $cBlack;
+}
+
+.visible-sp{
+    @media screen and (min-width: $breakpoints){
+        display: none;
+    }  
+}
+
+.visible-pc{
+    display: none;
+    @media screen and (min-width: $breakpoints){
+        display: block;
+    }  
+}
+
+#container{
+    @media screen and (min-width: $breakpoints){
+        max-width: $contentMaxWidth;
+        display: flex;
+    }  
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    margin: 0 18px;
+
+    @media screen and (min-width: $breakpoints){
+        width: 300px;
+    }
+
+    & .logo{
+        
+        & .logo_img{
+            width: 180px;
+        }
+    }
+
+    & .hamburger{
+        cursor: pointer;
+
+        @media screen and (min-width: $breakpoints){
+            display: none;
+        }
+
+        & .line{
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: $cBlack;
+
+            &:first-child{
+                margin-bottom: 8px;
+            }
+            &:last-child{
+                margin-top: 8px;
+            }
+        }
+
+    }
+
+    & .navigation{
+        top: 0;
+        left: -300px;
+        position: absolute;
+        height: 100vh;
+        width: 300px;
+        padding: 25px;
+        background-color: $cWhite;
+        opacity: 0;
+        transition: all 0.5s ease;
+
+        & h1{
+            margin-bottom: 41px;
+        }
+
+        & .category, .sns{
+            list-style: none;
+            padding-left: 0;
+            &:first-child{
+                margin-bottom: 84px;
+            }
+            &__item{
+                font-size: 14px;
+                margin-bottom: 23px;
+            }
+        }
+        @media screen and (min-width: $breakpoints){
+            position: fixed;
+            left: 0;
+            opacity: 1;
+            padding: 40px 45px;
+            transition: none;
+        }
+
+        &.visible{
+            transform: translateX(300px);
+            opacity: 1;
+            @media screen and (min-width: $breakpoints){
+                left: -300px;
+            }
+        }
+        
+    }
+
+}
+
+main{
+    @media screen and (min-width: $breakpoints){
+        flex: 1;
+    }  
+}
