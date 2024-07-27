@@ -1,7 +1,55 @@
 $cBlack: #121212;
 $cWhite: white;
-$cBg: #5454544D;
+$cBgLight: #5454544D;
+$cBgDark: #000000CC;
 $cShadow: #2E2E2E;
 
 $contentMaxWidth: 900px;
 $breakpoints: 960px;
+
+.examples, .features{
+    @media screen and (min-width:$breakpoints) {
+        max-width: $contentMaxWidth;
+    }
+    
+    &__title{
+        position: relative;
+        display: block;
+        color: $cWhite;
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 63px;
+        margin-bottom: 37px;
+        text-align: center;
+        @media screen and (min-width: $breakpoints){
+            padding-top: 85px;
+            font-size: 28px;
+        } 
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 77px;
+            left: 0;
+            width: 17.9%;
+            height: 1px;
+            background-color: $cWhite;
+            @media screen and (min-width: $breakpoints){
+                top: 103px;
+            } 
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 77px;
+            right: 0;
+            width: 17.9%;
+            height: 1px;
+            background-color: $cWhite;
+            @media screen and (min-width: $breakpoints){
+                top: 103px;
+            } 
+        } 
+    }
+
+}

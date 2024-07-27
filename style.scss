@@ -129,54 +129,13 @@ main{
     }
 
     & .bg{
-        background-color: $cBg;
+        background: linear-gradient($cBgLight, $cBgDark);;
 
         & .examples{
             padding: 0 20px;
-            margin: 0 auto;
-
+            margin: 0 auto 93px auto;
             @media screen and (min-width:$breakpoints) {
-                max-width: $contentMaxWidth;
-            }
-    
-            &__title{
-                position: relative;
-                display: block;
-                color: $cWhite;
-                font-size: 20px;
-                font-weight: bold;
-                padding-top: 63px;
-                margin-bottom: 37px;
-                text-align: center;
-                @media screen and (min-width: $breakpoints){
-                    padding-top: 85px;
-                    font-size: 28px;
-                } 
-    
-                &::before{
-                    content: '';
-                    position: absolute;
-                    top: 77px;
-                    left: 0;
-                    width: 17.9%;
-                    height: 1px;
-                    background-color: $cWhite;
-                    @media screen and (min-width: $breakpoints){
-                        top: 103px;
-                    } 
-                }
-                &::after{
-                    content: '';
-                    position: absolute;
-                    top: 77px;
-                    right: 0;
-                    width: 17.9%;
-                    height: 1px;
-                    background-color: $cWhite;
-                    @media screen and (min-width: $breakpoints){
-                        top: 103px;
-                    } 
-                }
+                margin-bottom: 50px;
             }
     
             &__body{
@@ -240,6 +199,59 @@ main{
 
                 @media screen and (min-width:$breakpoints) {
                     width: 46.7%;
+                }
+            }
+        }
+
+        & .features{
+            padding: 0 20px 124px 20px;
+            margin: 0 auto;
+            @media screen and (min-width:$breakpoints) {
+                padding-bottom: 164px;
+            }
+
+            &__body{
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                padding-left: 0;
+            }
+
+            &__item{
+                width: 30%;
+
+                &__eyecatch{
+                    width: 100%;
+                    padding-top: 100%;
+                    margin-bottom: 18px;
+                    position: relative;
+                    border-radius: 50%;
+                    border: 1px solid $cWhite;
+                    
+                    & .eyecatchitem{
+                        position: absolute;
+                        display: block;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 14px;
+                        color: $cWhite;
+                    }
+
+                }
+
+                &__title{
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: $cWhite;
+                    margin-bottom: 13px;
+                    text-align: center;
+                }
+
+                &__body{
+                    font-size: 14px;
+                    color: $cWhite;
+                    text-align: center;
                 }
             }
         }
