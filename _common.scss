@@ -2,12 +2,14 @@ $cBlack: #121212;
 $cWhite: white;
 $cBgLight: #5454544D;
 $cBgDark: #000000CC;
+$cBgBlack: #414141;
 $cShadow: #2E2E2E;
+$cChartYellow: #FFDD00;
 
 $contentMaxWidth: 900px;
 $breakpoints: 960px;
 
-.examples, .features{
+.examples, .features, .flow{
     @media screen and (min-width:$breakpoints) {
         max-width: $contentMaxWidth;
     }
@@ -15,7 +17,7 @@ $breakpoints: 960px;
     &__title{
         position: relative;
         display: block;
-        color: $cWhite;
+        color: $cBlack;
         font-size: 20px;
         font-weight: bold;
         padding-top: 63px;
@@ -33,7 +35,7 @@ $breakpoints: 960px;
             left: 0;
             width: 17.9%;
             height: 1px;
-            background-color: $cWhite;
+            background-color: $cBlack;
             @media screen and (min-width: $breakpoints){
                 top: 103px;
             } 
@@ -45,7 +47,7 @@ $breakpoints: 960px;
             right: 0;
             width: 17.9%;
             height: 1px;
-            background-color: $cWhite;
+            background-color: $cBlack;
             @media screen and (min-width: $breakpoints){
                 top: 103px;
             } 

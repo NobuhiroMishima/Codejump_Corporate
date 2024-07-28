@@ -137,6 +137,16 @@ main{
             @media screen and (min-width:$breakpoints) {
                 margin-bottom: 50px;
             }
+
+            &__title{
+                color: $cWhite;
+                &::before{
+                    background-color: $cWhite;
+                }
+                &::after{
+                    background-color: $cWhite;
+                }
+            }
     
             &__body{
                 display: flex;
@@ -210,6 +220,17 @@ main{
                 padding-bottom: 164px;
             }
 
+            &__title{
+                color: $cWhite;
+                margin-bottom: 34px;
+                &::before{
+                    background-color: $cWhite;
+                }
+                &::after{
+                    background-color: $cWhite;
+                }
+            }
+
             &__body{
                 display: flex;
                 justify-content: space-between;
@@ -252,6 +273,149 @@ main{
                     font-size: 14px;
                     color: $cWhite;
                     text-align: center;
+                }
+            }
+        }
+    }
+
+    & .flow{
+        padding: 0 20px;
+        margin: 0 auto;
+
+        &__title{
+            margin-bottom: 40px;
+            @media screen and (min-width:$breakpoints) {
+                padding-top: 125px;
+                margin-bottom: 72px;
+                &::before{
+                    top: 139px;
+                }
+                &::after{
+                    top: 139px;
+                }
+            }
+        }
+
+        &__description{
+            margin-bottom: 35px;
+            color: $cBlack;
+            @media screen and (min-width:$breakpoints) {
+                margin-bottom: 65px;
+            }
+        }
+
+        &__content{
+            display: flex;
+            flex-direction: column;
+            @media screen and (min-width:$breakpoints) {
+                flex-direction: row;
+            }
+        }
+
+        &__chart{
+            list-style: none;
+            padding-left: 0;
+            position: relative;
+            margin-bottom: 83px;
+            @media screen and (min-width:$breakpoints) {
+                width: 23.3%;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 50px;
+                height: 100%;
+                background-color: $cChartYellow;
+            }
+
+            &__item{
+                margin: 0 20px 60px 20px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                &__eyecatch{
+                    height: 80px;
+                    position: relative;
+                    background-color: $cBgBlack;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: -30px;
+                        left: 0;
+                        width: 100%;
+                        height: 30px;
+                        background-color: $cBgBlack;
+                        clip-path: polygon(0 0, 100% 0, 50% 100%);
+                    }
+                    @media screen and (min-width:$breakpoints) {
+                        height: 90px;
+                    }
+
+                    & .eyecatchitem{
+                        color: $cWhite;
+                        text-align: center;
+                        line-height: 80px;
+                    }
+                }
+            }
+        }
+
+        &__body{
+            list-style: none;
+            padding-left: 0;
+            @media screen and (min-width:$breakpoints) {
+                width: 69.9%;
+            }
+
+            &__item{
+                display: flex;
+
+                &__num{
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    background-color: $cBgBlack;
+                    color: $cWhite;
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 35px;
+                }
+
+                &__content{
+                    flex: 1;
+                    padding-left: 10px;
+                    margin-bottom: 51px;
+                    @media screen and (min-width:$breakpoints) {
+                        margin-bottom: 54px;
+                    }
+
+                    & .contenttitle{
+                        position: relative;
+                        font-size: 20px;
+                        line-height: 20px;
+                        margin-bottom: 28px;
+
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            bottom: -15px;
+                            left: 0;
+                            width: 100%;
+                            height: 1px;
+                            background-color: $cBlack;
+                        }
+                    }
+
+                    & .contentbody{
+                        padding-right: 10px;
+                        font-size: 16px;
+                        color: $cBlack;
+                    }
                 }
             }
         }
