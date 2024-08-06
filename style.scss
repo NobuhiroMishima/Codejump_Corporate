@@ -399,6 +399,7 @@ main{
                         font-size: 20px;
                         line-height: 20px;
                         margin-bottom: 28px;
+                        color: $cBlack;
 
                         &::after{
                             content: '';
@@ -417,6 +418,61 @@ main{
                         color: $cBlack;
                     }
                 }
+            }
+        }
+    }
+
+    & .contact{
+        padding: 0 20px;
+        margin: 0 auto;
+        &__title{
+            margin-bottom: 40px;
+        }
+
+        &__description{
+            font-size: 16px;
+            color: $cBlack;
+            margin-bottom: 35px;
+        }
+
+        &__kinds{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            list-style: none;
+            padding-left: 0;
+
+            &__item{
+                position: relative;
+                height: 192px;
+                width: 65%;
+                border: 1px solid $cBlack;
+                margin-bottom: 20px;
+                text-align: center;
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 4px;
+                    right: 4px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: $cBgBlack;
+                    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+
+                }
+
+                &__link{
+                    display: block;
+                    height: 100%;
+                }
+
+                &__icon{
+                    padding-top: 50px;
+                    margin: 0 auto;
+                }
+                
             }
         }
     }

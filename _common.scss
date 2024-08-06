@@ -9,7 +9,7 @@ $cChartYellow: #FFDD00;
 $contentMaxWidth: 900px;
 $breakpoints: 960px;
 
-.examples, .features, .flow{
+.examples, .features, .flow, .contact{
     @media screen and (min-width:$breakpoints) {
         max-width: $contentMaxWidth;
     }

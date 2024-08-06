@@ -1,9 +1,9 @@
 @media screen and (min-width: 960px) {
-  .examples, .features, .flow {
+  .examples, .features, .flow, .contact {
     max-width: 900px;
   }
 }
-.examples__title, .features__title, .flow__title {
+.examples__title, .features__title, .flow__title, .contact__title {
   position: relative;
   display: block;
   color: #121212;
@@ -14,12 +14,12 @@
   text-align: center;
 }
 @media screen and (min-width: 960px) {
-  .examples__title, .features__title, .flow__title {
+  .examples__title, .features__title, .flow__title, .contact__title {
     padding-top: 85px;
     font-size: 28px;
   }
 }
-.examples__title::before, .features__title::before, .flow__title::before {
+.examples__title::before, .features__title::before, .flow__title::before, .contact__title::before {
   content: "";
   position: absolute;
   top: 77px;
@@ -29,11 +29,11 @@
   background-color: #121212;
 }
 @media screen and (min-width: 960px) {
-  .examples__title::before, .features__title::before, .flow__title::before {
+  .examples__title::before, .features__title::before, .flow__title::before, .contact__title::before {
     top: 103px;
   }
 }
-.examples__title::after, .features__title::after, .flow__title::after {
+.examples__title::after, .features__title::after, .flow__title::after, .contact__title::after {
   content: "";
   position: absolute;
   top: 77px;
@@ -43,7 +43,7 @@
   background-color: #121212;
 }
 @media screen and (min-width: 960px) {
-  .examples__title::after, .features__title::after, .flow__title::after {
+  .examples__title::after, .features__title::after, .flow__title::after, .contact__title::after {
     top: 103px;
   }
 }
@@ -429,6 +429,7 @@ main .flow__body__item__content .contenttitle {
   font-size: 20px;
   line-height: 20px;
   margin-bottom: 28px;
+  color: #121212;
 }
 main .flow__body__item__content .contenttitle::after {
   content: "";
@@ -443,4 +444,50 @@ main .flow__body__item__content .contentbody {
   padding-right: 10px;
   font-size: 16px;
   color: #121212;
+}
+main .contact {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+main .contact__title {
+  margin-bottom: 40px;
+}
+main .contact__description {
+  font-size: 16px;
+  color: #121212;
+  margin-bottom: 35px;
+}
+main .contact__kinds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+}
+main .contact__kinds__item {
+  position: relative;
+  height: 192px;
+  width: 65%;
+  border: 1px solid #121212;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .contact__kinds__item::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  background-color: #414141;
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+main .contact__kinds__item__link {
+  display: block;
+  height: 100%;
+}
+main .contact__kinds__item__icon {
+  padding-top: 50px;
+  margin: 0 auto;
 }
