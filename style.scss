@@ -424,7 +424,7 @@ main{
 
     & .contact{
         padding: 0 20px;
-        margin: 0 auto;
+        margin: 0 auto 120px auto;
         &__title{
             margin-bottom: 40px;
             @media screen and (min-width: $breakpoints){
@@ -490,4 +490,64 @@ main{
     }
     
 
+}
+
+.footer{
+    background-color: $cBgBlack;
+    position: relative;
+    & .footnav{
+        list-style: none;
+        padding: 50px 20px 64px 20px;
+        text-align: center;
+
+        &__item{
+            position: relative;
+            display: inline-block;
+            margin: 0 40px 10px 0;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: -22px;
+                bottom: 0;
+                width: 1px;
+                background-color: $cWhite;
+            }
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
+            &__link{
+                color: $cWhite;
+            }
+
+        }
+    }
+    & .copy{
+        text-align: center;   
+        color: $cWhite;
+        padding-bottom: 22px;
+    }
+    & .go_top{
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid $cWhite;
+        &::after{
+            content: '';
+            position: fixed;
+            bottom: 46px;
+            right: 43px;
+            width: 14px;
+            height: 7px;
+            clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+            background-color: $cWhite;
+
+
+        }
+    }
 }

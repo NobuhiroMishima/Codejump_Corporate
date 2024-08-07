@@ -447,7 +447,7 @@ main .flow__body__item__content .contentbody {
 }
 main .contact {
   padding: 0 20px;
-  margin: 0 auto;
+  margin: 0 auto 120px auto;
 }
 main .contact__title {
   margin-bottom: 40px;
@@ -511,4 +511,59 @@ main .contact__kinds__item__link {
 main .contact__kinds__item__icon {
   padding-top: 50px;
   margin: 0 auto;
+}
+
+.footer {
+  background-color: #414141;
+  position: relative;
+}
+.footer .footnav {
+  list-style: none;
+  padding: 50px 20px 64px 20px;
+  text-align: center;
+}
+.footer .footnav__item {
+  position: relative;
+  display: inline-block;
+  margin: 0 40px 10px 0;
+}
+.footer .footnav__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -22px;
+  bottom: 0;
+  width: 1px;
+  background-color: white;
+}
+.footer .footnav__item:last-child::after {
+  display: none;
+}
+.footer .footnav__item__link {
+  color: white;
+}
+.footer .copy {
+  text-align: center;
+  color: white;
+  padding-bottom: 22px;
+}
+.footer .go_top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.footer .go_top::after {
+  content: "";
+  position: fixed;
+  bottom: 46px;
+  right: 43px;
+  width: 14px;
+  height: 7px;
+  -webkit-clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  background-color: white;
 }
