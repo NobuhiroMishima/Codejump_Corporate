@@ -452,10 +452,20 @@ main .contact {
 main .contact__title {
   margin-bottom: 40px;
 }
+@media screen and (min-width: 960px) {
+  main .contact__title {
+    margin-bottom: 72px;
+  }
+}
 main .contact__description {
   font-size: 16px;
   color: #121212;
   margin-bottom: 35px;
+}
+@media screen and (min-width: 960px) {
+  main .contact__description {
+    margin-bottom: 65px;
+  }
 }
 main .contact__kinds {
   display: flex;
@@ -464,6 +474,12 @@ main .contact__kinds {
   list-style: none;
   padding-left: 0;
 }
+@media screen and (min-width: 960px) {
+  main .contact__kinds {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 main .contact__kinds__item {
   position: relative;
   height: 192px;
@@ -471,6 +487,11 @@ main .contact__kinds__item {
   border: 1px solid #121212;
   margin-bottom: 20px;
   text-align: center;
+}
+@media screen and (min-width: 960px) {
+  main .contact__kinds__item {
+    width: 30%;
+  }
 }
 main .contact__kinds__item::after {
   content: "";

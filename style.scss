@@ -427,21 +427,30 @@ main{
         margin: 0 auto;
         &__title{
             margin-bottom: 40px;
+            @media screen and (min-width: $breakpoints){
+                margin-bottom: 72px;
+            }  
         }
 
         &__description{
             font-size: 16px;
             color: $cBlack;
             margin-bottom: 35px;
+            @media screen and (min-width: $breakpoints){
+                margin-bottom: 65px;
+            }  
         }
 
         &__kinds{
             display: flex;
             flex-direction: column;
             align-items: center;
-
             list-style: none;
             padding-left: 0;
+            @media screen and (min-width: $breakpoints){
+                flex-direction: row;
+                justify-content: space-between;
+            }  
 
             &__item{
                 position: relative;
@@ -450,6 +459,9 @@ main{
                 border: 1px solid $cBlack;
                 margin-bottom: 20px;
                 text-align: center;
+                @media screen and (min-width: $breakpoints){
+                    width: 30%;
+                }  
 
                 &::after{
                     content: '';
