@@ -76,13 +76,18 @@ a {
 
 .header {
   display: flex;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
+  width: 100%;
   height: 72px;
-  margin: 0 18px;
+  padding: 0 18px;
+  z-index: 20;
 }
 @media screen and (min-width: 960px) {
   .header {
+    position: static;
     width: 300px;
   }
 }
@@ -159,41 +164,53 @@ a {
     flex: 1;
   }
 }
+main .mainvideo {
+  position: relative;
+  height: 528px;
+}
+@media screen and (min-width: 960px) {
+  main .mainvideo {
+    height: 100vh;
+  }
+}
 main .mainvideo .mv {
+  position: fixed;
   width: 100%;
   height: 528px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 0 50%;
      object-position: 0 50%;
+  z-index: -10;
 }
 @media screen and (min-width: 960px) {
   main .mainvideo .mv {
-    height: 600px;
+    left: 300px;
+    height: 100vh;
   }
 }
-main .bg {
+main .bg-black {
   background: linear-gradient(rgba(84, 84, 84, 0.3019607843), rgba(0, 0, 0, 0.8));
 }
-main .bg .examples {
+main .bg-black .examples {
   padding: 0 20px;
   margin: 0 auto 93px auto;
 }
 @media screen and (min-width: 960px) {
-  main .bg .examples {
+  main .bg-black .examples {
     margin-bottom: 50px;
   }
 }
-main .bg .examples__title {
+main .bg-black .examples__title {
   color: white;
 }
-main .bg .examples__title::before {
+main .bg-black .examples__title::before {
   background-color: white;
 }
-main .bg .examples__title::after {
+main .bg-black .examples__title::after {
   background-color: white;
 }
-main .bg .examples__body {
+main .bg-black .examples__body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -202,16 +219,16 @@ main .bg .examples__body {
   padding-left: 0;
 }
 @media screen and (min-width: 960px) {
-  main .bg .examples__body {
+  main .bg-black .examples__body {
     flex-direction: row;
   }
 }
-main .bg .examples__item {
+main .bg-black .examples__item {
   position: relative;
   margin-bottom: 30px;
   border: 1px solid white;
 }
-main .bg .examples__item__link::before {
+main .bg-black .examples__item__link::before {
   content: "";
   position: absolute;
   top: 0;
@@ -220,7 +237,7 @@ main .bg .examples__item__link::before {
   left: 0;
   box-shadow: inset 0 -30px 15px #2E2E2E;
 }
-main .bg .examples__item__link::after {
+main .bg-black .examples__item__link::after {
   content: "";
   position: absolute;
   bottom: 4px;
@@ -228,52 +245,52 @@ main .bg .examples__item__link::after {
   font-size: 12px;
   color: white;
 }
-main .bg .examples__item__link.link1::after {
+main .bg-black .examples__item__link.link1::after {
   content: "PROJECT_01";
 }
-main .bg .examples__item__link.link2::after {
+main .bg-black .examples__item__link.link2::after {
   content: "PROJECT_02";
 }
-main .bg .examples__item__link.link3::after {
+main .bg-black .examples__item__link.link3::after {
   content: "PROJECT_03";
 }
-main .bg .examples__item__link.link4::after {
+main .bg-black .examples__item__link.link4::after {
   content: "PROJECT_04";
 }
 @media screen and (min-width: 960px) {
-  main .bg .examples__item {
+  main .bg-black .examples__item {
     width: 46.7%;
   }
 }
-main .bg .features {
+main .bg-black .features {
   padding: 0 20px 124px 20px;
   margin: 0 auto;
 }
 @media screen and (min-width: 960px) {
-  main .bg .features {
+  main .bg-black .features {
     padding-bottom: 164px;
   }
 }
-main .bg .features__title {
+main .bg-black .features__title {
   color: white;
   margin-bottom: 34px;
 }
-main .bg .features__title::before {
+main .bg-black .features__title::before {
   background-color: white;
 }
-main .bg .features__title::after {
+main .bg-black .features__title::after {
   background-color: white;
 }
-main .bg .features__body {
+main .bg-black .features__body {
   display: flex;
   justify-content: space-between;
   list-style: none;
   padding-left: 0;
 }
-main .bg .features__item {
+main .bg-black .features__item {
   width: 30%;
 }
-main .bg .features__item__eyecatch {
+main .bg-black .features__item__eyecatch {
   width: 100%;
   padding-top: 100%;
   margin-bottom: 18px;
@@ -281,7 +298,7 @@ main .bg .features__item__eyecatch {
   border-radius: 50%;
   border: 1px solid white;
 }
-main .bg .features__item__eyecatch .eyecatchitem {
+main .bg-black .features__item__eyecatch .eyecatchitem {
   position: absolute;
   display: block;
   top: 50%;
@@ -290,67 +307,70 @@ main .bg .features__item__eyecatch .eyecatchitem {
   font-size: 14px;
   color: white;
 }
-main .bg .features__item__title {
+main .bg-black .features__item__title {
   font-size: 16px;
   font-weight: bold;
   color: white;
   margin-bottom: 13px;
   text-align: center;
 }
-main .bg .features__item__body {
+main .bg-black .features__item__body {
   font-size: 14px;
   color: white;
   text-align: center;
 }
-main .flow {
+main .bg-white {
+  background-color: white;
+}
+main .bg-white .flow {
   padding: 0 20px;
   margin: 0 auto;
 }
-main .flow__title {
+main .bg-white .flow__title {
   margin-bottom: 40px;
 }
 @media screen and (min-width: 960px) {
-  main .flow__title {
+  main .bg-white .flow__title {
     padding-top: 125px;
     margin-bottom: 72px;
   }
-  main .flow__title::before {
+  main .bg-white .flow__title::before {
     top: 139px;
   }
-  main .flow__title::after {
+  main .bg-white .flow__title::after {
     top: 139px;
   }
 }
-main .flow__description {
+main .bg-white .flow__description {
   margin-bottom: 35px;
   color: #121212;
 }
 @media screen and (min-width: 960px) {
-  main .flow__description {
+  main .bg-white .flow__description {
     margin-bottom: 65px;
   }
 }
-main .flow__content {
+main .bg-white .flow__content {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 960px) {
-  main .flow__content {
+  main .bg-white .flow__content {
     flex-direction: row;
   }
 }
-main .flow__chart {
+main .bg-white .flow__chart {
   list-style: none;
   padding-left: 0;
   position: relative;
   margin-bottom: 83px;
 }
 @media screen and (min-width: 960px) {
-  main .flow__chart {
+  main .bg-white .flow__chart {
     width: 23.3%;
   }
 }
-main .flow__chart::before {
+main .bg-white .flow__chart::before {
   content: "";
   position: absolute;
   top: 0;
@@ -360,18 +380,18 @@ main .flow__chart::before {
   height: 100%;
   background-color: #FFDD00;
 }
-main .flow__chart__item {
+main .bg-white .flow__chart__item {
   margin: 0 20px 60px 20px;
 }
-main .flow__chart__item:last-child {
+main .bg-white .flow__chart__item:last-child {
   margin-bottom: 0;
 }
-main .flow__chart__item__eyecatch {
+main .bg-white .flow__chart__item__eyecatch {
   height: 80px;
   position: relative;
   background-color: #414141;
 }
-main .flow__chart__item__eyecatch::after {
+main .bg-white .flow__chart__item__eyecatch::after {
   content: "";
   position: absolute;
   bottom: -30px;
@@ -383,28 +403,28 @@ main .flow__chart__item__eyecatch::after {
           clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 @media screen and (min-width: 960px) {
-  main .flow__chart__item__eyecatch {
+  main .bg-white .flow__chart__item__eyecatch {
     height: 90px;
   }
 }
-main .flow__chart__item__eyecatch .eyecatchitem {
+main .bg-white .flow__chart__item__eyecatch .eyecatchitem {
   color: white;
   text-align: center;
   line-height: 80px;
 }
-main .flow__body {
+main .bg-white .flow__body {
   list-style: none;
   padding-left: 0;
 }
 @media screen and (min-width: 960px) {
-  main .flow__body {
+  main .bg-white .flow__body {
     width: 69.9%;
   }
 }
-main .flow__body__item {
+main .bg-white .flow__body__item {
   display: flex;
 }
-main .flow__body__item__num {
+main .bg-white .flow__body__item__num {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -414,24 +434,24 @@ main .flow__body__item__num {
   text-align: center;
   line-height: 35px;
 }
-main .flow__body__item__content {
+main .bg-white .flow__body__item__content {
   flex: 1;
   padding-left: 10px;
   margin-bottom: 51px;
 }
 @media screen and (min-width: 960px) {
-  main .flow__body__item__content {
+  main .bg-white .flow__body__item__content {
     margin-bottom: 54px;
   }
 }
-main .flow__body__item__content .contenttitle {
+main .bg-white .flow__body__item__content .contenttitle {
   position: relative;
   font-size: 20px;
   line-height: 20px;
   margin-bottom: 28px;
   color: #121212;
 }
-main .flow__body__item__content .contenttitle::after {
+main .bg-white .flow__body__item__content .contenttitle::after {
   content: "";
   position: absolute;
   bottom: -15px;
@@ -440,34 +460,35 @@ main .flow__body__item__content .contenttitle::after {
   height: 1px;
   background-color: #121212;
 }
-main .flow__body__item__content .contentbody {
+main .bg-white .flow__body__item__content .contentbody {
   padding-right: 10px;
   font-size: 16px;
   color: #121212;
 }
-main .contact {
+main .bg-white .contact {
   padding: 0 20px;
-  margin: 0 auto 120px auto;
+  margin: 0 auto;
+  padding-bottom: 230px;
 }
-main .contact__title {
+main .bg-white .contact__title {
   margin-bottom: 40px;
 }
 @media screen and (min-width: 960px) {
-  main .contact__title {
+  main .bg-white .contact__title {
     margin-bottom: 72px;
   }
 }
-main .contact__description {
+main .bg-white .contact__description {
   font-size: 16px;
   color: #121212;
   margin-bottom: 35px;
 }
 @media screen and (min-width: 960px) {
-  main .contact__description {
+  main .bg-white .contact__description {
     margin-bottom: 65px;
   }
 }
-main .contact__kinds {
+main .bg-white .contact__kinds {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -475,12 +496,12 @@ main .contact__kinds {
   padding-left: 0;
 }
 @media screen and (min-width: 960px) {
-  main .contact__kinds {
+  main .bg-white .contact__kinds {
     flex-direction: row;
     justify-content: space-between;
   }
 }
-main .contact__kinds__item {
+main .bg-white .contact__kinds__item {
   position: relative;
   height: 192px;
   width: 65%;
@@ -489,11 +510,11 @@ main .contact__kinds__item {
   text-align: center;
 }
 @media screen and (min-width: 960px) {
-  main .contact__kinds__item {
+  main .bg-white .contact__kinds__item {
     width: 30%;
   }
 }
-main .contact__kinds__item::after {
+main .bg-white .contact__kinds__item::after {
   content: "";
   position: absolute;
   bottom: 4px;
@@ -504,11 +525,11 @@ main .contact__kinds__item::after {
   -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
           clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
-main .contact__kinds__item__link {
+main .bg-white .contact__kinds__item__link {
   display: block;
   height: 100%;
 }
-main .contact__kinds__item__icon {
+main .bg-white .contact__kinds__item__icon {
   padding-top: 50px;
   margin: 0 auto;
 }
