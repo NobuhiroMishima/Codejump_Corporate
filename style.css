@@ -610,6 +610,9 @@ main .bg-white .contact__kinds__item__icon {
   height: 50px;
   border-radius: 50%;
   border: 1px solid white;
+  background-color: #414141;
+  opacity: 0;
+  visibility: hidden;
 }
 .footer .go_top::after {
   content: "";
@@ -621,4 +624,8 @@ main .bg-white .contact__kinds__item__icon {
   -webkit-clip-path: polygon(50% 0, 0% 100%, 100% 100%);
           clip-path: polygon(50% 0, 0% 100%, 100% 100%);
   background-color: white;
+}
+.footer .go_top.active {
+  opacity: 1;
+  visibility: visible;
 }

@@ -592,6 +592,9 @@ main{
         height: 50px;
         border-radius: 50%;
         border: 1px solid $cWhite;
+        background-color: $cBgBlack;
+        opacity: 0;
+        visibility: hidden;
         &::after{
             content: '';
             position: fixed;
@@ -601,8 +604,11 @@ main{
             height: 7px;
             clip-path: polygon(50% 0, 0% 100%, 100% 100%);
             background-color: $cWhite;
-
-
+        }
+        
+        &.active{
+            opacity: 1;
+            visibility: visible;
         }
     }
 }
