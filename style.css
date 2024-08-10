@@ -82,7 +82,7 @@ a {
   width: 100%;
   height: 100%;
   background-color: #121212;
-  z-index: 15;
+  z-index: 30;
   opacity: 0.8;
   cursor: pointer;
 }
@@ -127,7 +127,8 @@ a {
 .header .hamburger .line:last-child {
   margin-top: 8px;
 }
-.header .navigation {
+
+.navigation {
   z-index: 50;
   top: 0;
   left: -300px;
@@ -139,22 +140,22 @@ a {
   opacity: 0;
   transition: all 0.5s ease;
 }
-.header .navigation h1 {
+.navigation h1 {
   margin-bottom: 41px;
 }
-.header .navigation .category, .header .navigation .sns {
+.navigation .category, .navigation .sns {
   list-style: none;
   padding-left: 0;
 }
-.header .navigation .category:first-of-type, .header .navigation .sns:first-of-type {
+.navigation .category:first-of-type, .navigation .sns:first-of-type {
   margin-bottom: 84px;
 }
-.header .navigation .category__item, .header .navigation .sns__item {
+.navigation .category__item, .navigation .sns__item {
   font-size: 14px;
   margin-bottom: 23px;
 }
 @media screen and (min-width: 960px) {
-  .header .navigation {
+  .navigation {
     position: fixed;
     left: 0;
     opacity: 1;
@@ -162,12 +163,12 @@ a {
     transition: none;
   }
 }
-.header .navigation.visible {
+.navigation.visible {
   transform: translateX(300px);
   opacity: 1;
 }
 @media screen and (min-width: 960px) {
-  .header .navigation.visible {
+  .navigation.visible {
     left: -300px;
   }
 }
@@ -301,6 +302,7 @@ main .bg-black .features__body {
   padding-left: 0;
 }
 main .bg-black .features__item {
+  position: relative;
   width: 30%;
 }
 main .bg-black .features__item__eyecatch {
@@ -310,6 +312,21 @@ main .bg-black .features__item__eyecatch {
   position: relative;
   border-radius: 50%;
   border: 1px solid white;
+  overflow: hidden;
+}
+main .bg-black .features__item__eyecatch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.3;
+  transition: transform 0.5s;
+}
+main .bg-black .features__item__eyecatch:hover::after {
+  transform: translateX(100%);
 }
 main .bg-black .features__item__eyecatch .eyecatchitem {
   position: absolute;
@@ -521,11 +538,15 @@ main .bg-white .contact__kinds__item {
   border: 1px solid #121212;
   margin-bottom: 20px;
   text-align: center;
+  transition: border 0.1s;
 }
 @media screen and (min-width: 960px) {
   main .bg-white .contact__kinds__item {
     width: 30%;
   }
+}
+main .bg-white .contact__kinds__item:hover {
+  border: 3px solid #121212;
 }
 main .bg-white .contact__kinds__item::after {
   content: "";
